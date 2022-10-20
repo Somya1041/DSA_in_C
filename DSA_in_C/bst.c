@@ -77,28 +77,28 @@ void inorder(struct node* temp)
         inorder(temp->right);
     }
 }
+/*
+struct node* delete(struct node* root, int val)
+{
+    if(root == NULL)
+    {
+        return NULL;
+    }
 
-// struct node* delete(struct node* root, int val)
-// {
-//     if(root == NULL)
-//     {
-//         return NULL;
-//     }
+    else if(root->left == NULL && root->right == NULL)
+    {
+        free(root);
+    }
 
-//     else if(root->left == NULL && root->right == NULL)
-//     {
-//         free(root);
-//     }
-
-//     else
-//     {
-//         struct node* pred;
-//         pred = inpred(root, val);
-//         root->val = pred->val;
-//         root->left = delete(root->left, pred->val);
-//     }
-// }
-
+    else
+    {
+        struct node* pred;
+        pred = inpred(root, val);
+        root->val = pred->val;
+        root->left = delete(root->left, pred->val);
+    }
+}
+*/
 struct node* inpred(struct node* root, int val)
 {
     struct node* temp = (struct node* )malloc(sizeof(struct node));
